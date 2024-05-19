@@ -1,0 +1,228 @@
+{
+  "clientName": "Thunder Client",
+  "collectionName": "AT&T 10Bis",
+  "collectionId": "968b4cd8-484d-4258-8878-8250cc793f27",
+  "dateExported": "2024-05-19T17:58:33.414Z",
+  "version": "1.2",
+  "folders": [
+    {
+      "_id": "3db719ee-9b50-46ba-9ab6-14c1622a9310",
+      "name": "restaurant",
+      "containerId": "",
+      "created": "2024-05-18T10:50:07.605Z",
+      "sortNum": 10000
+    },
+    {
+      "_id": "f953840a-ccea-4043-8abe-e0698c087069",
+      "name": "rating",
+      "containerId": "",
+      "created": "2024-05-18T11:14:02.485Z",
+      "sortNum": 20000
+    },
+    {
+      "_id": "47fc245c-bd59-429b-a188-6763a72014cc",
+      "name": "get",
+      "containerId": "3db719ee-9b50-46ba-9ab6-14c1622a9310",
+      "created": "2024-05-19T14:18:35.942Z",
+      "sortNum": 30000
+    },
+    {
+      "_id": "b06bc62f-b177-4dba-89b5-1d3cea492cc7",
+      "name": "dish",
+      "containerId": "",
+      "created": "2024-05-19T14:21:33.415Z",
+      "sortNum": 40000
+    },
+    {
+      "_id": "c73b8eed-31cd-4584-97c0-a66616fb21f4",
+      "name": "orders",
+      "containerId": "",
+      "created": "2024-05-19T14:33:20.245Z",
+      "sortNum": 50000
+    }
+  ],
+  "requests": [
+    {
+      "_id": "6bd29ac0-f0b4-4e31-b305-7e3acff5eef9",
+      "colId": "968b4cd8-484d-4258-8878-8250cc793f27",
+      "containerId": "47fc245c-bd59-429b-a188-6763a72014cc",
+      "name": "get",
+      "url": "http://localhost:8000/api/restaurants",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2024-05-18T09:49:39.030Z",
+      "modified": "2024-05-19T14:19:38.319Z",
+      "headers": []
+    },
+    {
+      "_id": "20b1b162-eceb-4340-8a48-8bcd0fed6a6d",
+      "colId": "968b4cd8-484d-4258-8878-8250cc793f27",
+      "containerId": "b06bc62f-b177-4dba-89b5-1d3cea492cc7",
+      "name": "get",
+      "url": "http://localhost:8000/api/restaurants/1/dishes",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2024-05-19T14:21:44.044Z",
+      "modified": "2024-05-19T14:57:49.389Z",
+      "headers": []
+    },
+    {
+      "_id": "3eeb3f1f-371a-4c36-b2d0-a62a3e62a378",
+      "colId": "968b4cd8-484d-4258-8878-8250cc793f27",
+      "containerId": "c73b8eed-31cd-4584-97c0-a66616fb21f4",
+      "name": "create",
+      "url": "http://localhost:8000/api/order",
+      "method": "POST",
+      "sortNum": 10000,
+      "created": "2024-05-19T14:33:26.559Z",
+      "modified": "2024-05-19T15:02:41.460Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"restaurantId\": 1,\n  \"orderItems\": [\n    {\n      \"dishId\": 1,\n      \"amount\": 1\n    },\n    {\n      \"dishId\": 4,\n      \"amount\": 1\n    }\n  ]\n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "5907b321-46b1-49fa-94b1-a9e703f450eb",
+      "colId": "968b4cd8-484d-4258-8878-8250cc793f27",
+      "containerId": "3db719ee-9b50-46ba-9ab6-14c1622a9310",
+      "name": "create",
+      "url": "http://localhost:8000/api/restaurants",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2024-05-18T10:49:49.633Z",
+      "modified": "2024-05-19T14:55:43.648Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"Bla2\",\n  \"isKosher\": false,\n  \"cuisines\": [\n    \"Mexican\",\n    \"Indian\"\n  ]\n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "1e943451-81c3-4efd-a228-37e6352caf1a",
+      "colId": "968b4cd8-484d-4258-8878-8250cc793f27",
+      "containerId": "47fc245c-bd59-429b-a188-6763a72014cc",
+      "name": "get-id",
+      "url": "http://localhost:8000/api/restaurants/1",
+      "method": "GET",
+      "sortNum": 20000,
+      "created": "2024-05-18T11:17:43.162Z",
+      "modified": "2024-05-19T17:58:14.261Z",
+      "headers": []
+    },
+    {
+      "_id": "d3fa5ef0-62dd-45f7-a40d-a736fb04aed3",
+      "colId": "968b4cd8-484d-4258-8878-8250cc793f27",
+      "containerId": "47fc245c-bd59-429b-a188-6763a72014cc",
+      "name": "get-cuisine",
+      "url": "http://localhost:8000/api/restaurants?cuisine=Mexican,Italian",
+      "method": "GET",
+      "sortNum": 20000,
+      "created": "2024-05-19T14:18:40.979Z",
+      "modified": "2024-05-19T14:51:29.642Z",
+      "headers": [],
+      "params": [
+        {
+          "name": "cuisine",
+          "value": "Mexican,Italian",
+          "isPath": false
+        }
+      ]
+    },
+    {
+      "_id": "dfb05f8d-3157-4c1e-aeb3-46801c3d7870",
+      "colId": "968b4cd8-484d-4258-8878-8250cc793f27",
+      "containerId": "b06bc62f-b177-4dba-89b5-1d3cea492cc7",
+      "name": "create",
+      "url": "http://localhost:8000/api/restaurants/1/dishes",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2024-05-19T14:22:27.588Z",
+      "modified": "2024-05-19T14:58:03.548Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"Pizza\",\n  \"description\": \"Great one\",\n  \"price\": 50\n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "7f7d6fc6-feea-489a-b5cc-6d2155f4ffff",
+      "colId": "968b4cd8-484d-4258-8878-8250cc793f27",
+      "containerId": "f953840a-ccea-4043-8abe-e0698c087069",
+      "name": "create",
+      "url": "http://localhost:8000/api/ratings",
+      "method": "POST",
+      "sortNum": 30000,
+      "created": "2024-05-18T11:14:18.516Z",
+      "modified": "2024-05-19T14:52:05.149Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"restaurantId\": 5,\n  \"rating\": 4.5\n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "279d4b75-91e6-449c-a048-d697d27c8e21",
+      "colId": "968b4cd8-484d-4258-8878-8250cc793f27",
+      "containerId": "3db719ee-9b50-46ba-9ab6-14c1622a9310",
+      "name": "delete",
+      "url": "http://localhost:8000/api/restaurants/5",
+      "method": "DELETE",
+      "sortNum": 30000,
+      "created": "2024-05-19T14:56:16.997Z",
+      "modified": "2024-05-19T14:56:33.489Z",
+      "headers": []
+    },
+    {
+      "_id": "a1113429-1c05-4426-b527-82ae023a5388",
+      "colId": "968b4cd8-484d-4258-8878-8250cc793f27",
+      "containerId": "b06bc62f-b177-4dba-89b5-1d3cea492cc7",
+      "name": "delete",
+      "url": "http://localhost:8000/api/restaurants/1/dishes/2",
+      "method": "DELETE",
+      "sortNum": 30000,
+      "created": "2024-05-19T14:57:19.045Z",
+      "modified": "2024-05-19T14:57:43.942Z",
+      "headers": []
+    },
+    {
+      "_id": "0f94f2c1-db1b-402f-8e90-dfdd4dae9016",
+      "colId": "968b4cd8-484d-4258-8878-8250cc793f27",
+      "containerId": "b06bc62f-b177-4dba-89b5-1d3cea492cc7",
+      "name": "update",
+      "url": "http://localhost:8000/api/restaurants/1/dishes/4",
+      "method": "PUT",
+      "sortNum": 40000,
+      "created": "2024-05-19T16:03:59.792Z",
+      "modified": "2024-05-19T16:06:29.925Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"description\": \"Great one\",\n  \"price\": 34\n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "3ac5fd46-1904-43c8-95ea-e07dc96ebb6e",
+      "colId": "968b4cd8-484d-4258-8878-8250cc793f27",
+      "containerId": "3db719ee-9b50-46ba-9ab6-14c1622a9310",
+      "name": "update",
+      "url": "http://localhost:8000/api/restaurants/4",
+      "method": "PUT",
+      "sortNum": 40000,
+      "created": "2024-05-19T16:07:04.272Z",
+      "modified": "2024-05-19T16:07:47.782Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"cuisines\": [\n    \"Asian\"\n  ]\n}",
+        "form": []
+      }
+    }
+  ],
+  "ref": "jBQxQM8pjeIJzMtY8Tg1fqh2S3vdZauN8fK-IxCt09Kcd31CT1hUmTus0DMIs3Am-AH9BUa7g7fpf0ZsAZgySQ"
+}
