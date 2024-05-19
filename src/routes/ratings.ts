@@ -1,9 +1,12 @@
 import { Router } from 'express';
+import { createRating } from '../controllers/ratings';
 
 const ratingsRouter = Router();
 
-ratingsRouter.get('/', (req, res) => {
-  res.send('Hello from ratings');
+ratingsRouter.post('/', async (req, res) => {
+  const response = await createRating(req.body);
+
+  res.status(response.status).json(response);
 });
 
 export default ratingsRouter;
